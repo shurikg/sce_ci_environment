@@ -2,4 +2,8 @@ groovy:
   - script: >
       import com.cloudbees.hudson.plugins.folder.Folder;
       import jenkins.model.Jenkins;
-      Jenkins.instance.createProject(Folder.class, 'b');
+      
+      def numOfTeams = 20
+      (1..numOfTeams).each { currentIndex ->
+        Jenkins.instance.createProject(Folder.class, 'Team_'+ currentIndex);
+      }
