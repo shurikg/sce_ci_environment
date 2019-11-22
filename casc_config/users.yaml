@@ -5,6 +5,6 @@ jenkins:
       enableCaptcha: false
       users:
         - id: "student1"
-          password: "#jbcrypt:$2y$10$XzDmr8iQ23G2K78//HpJueEcqs8VGny8yxIC7M.w50dCue1F1ICXe"
+          password: "#jbcrypt:$2a$10$E1hhdKyQjeVVS9zdUgjMk.I5g/Urv7bt3fWAl9js7vKPo4fCgBE6a"
         - id: "student2"
-          password: "#jbcrypt:$2y$10$XzDmr8iQ23G2K78//HpJueEcqs8VGny8yxIC7M.w50dCue1F1ICXe"
+          password: "#jbcrypt:$2a$10$E1hhdKyQjeVVS9zdUgjMk.I5g/Urv7bt3fWAl9js7vKPo4fCgBE6a"
