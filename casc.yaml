@@ -5,8 +5,11 @@ jenkins:
       enableCaptcha: false
       users:
         - id: "3"
+          password: "3"
         - id: "4"
+          password: "3"
         - id: "5"
+          password: "3"
 groovy:
   - script: >
       import com.cloudbees.hudson.plugins.folder.Folder;
