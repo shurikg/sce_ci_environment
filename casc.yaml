@@ -5,5 +5,8 @@ groovy:
       
       def numOfTeams = 20;
       (1..numOfTeams).each { currentIndex ->
-        Jenkins.instance.createProject(Folder.class, 'Team_'+ currentIndex);
+        def folderName = 'Team_' + currentIndex;
+        if (Jenkins.instance.getItem(folderName) == null) {
+          Jenkins.instance.createProject(Folder.class, folderName);
+        }
       }
