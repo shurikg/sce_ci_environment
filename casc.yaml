@@ -1,3 +1,4 @@
-jobs:
+groovy:
   - script: >
-      folder('b') {}
+      import com.cloudbees.hudson.plugins.folder.*
+      Jenkins.instance.createProject(Folder.class, 'b')
