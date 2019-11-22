@@ -1,4 +1,5 @@
 groovy:
   - script: >
       import com.cloudbees.hudson.plugins.folder.*
+      import jenkins.model.Jenkins
       Jenkins.instance.createProject(Folder.class, 'b')
