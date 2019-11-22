@@ -1,3 +1,12 @@
+jenkins:
+  securityRealm:
+    local:
+      allowsSignup: false
+      enableCaptcha: false
+      users:
+        - id: "3"
+        - id: "4"
+        - id: "5"
 groovy:
   - script: >
       import com.cloudbees.hudson.plugins.folder.Folder;
