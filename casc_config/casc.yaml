@@ -15,15 +15,15 @@ groovy:
         def folderName = 'Team_' + currentIndex;
         if (Jenkins.instance.getItem(folderName) == null) {
           Jenkins.instance.createProject(Folder.class, folderName);
-        }
-      }
+        };
+      };
       def exampleFolderName = "Examples";
       if (Jenkins.instance.getItem(exampleFolderName) == null) {
           Jenkins.instance.createProject(Folder.class, exampleFolderName);
       }
 jobs:
   - script: >
-      pipelineJob('Maven-Example') {
+      pipelineJob('Examples/Maven-Example') {
           definition {
               cpsScm {
                   scriptPath 'jenkins/Jenkinsfile'
