@@ -4,6 +4,8 @@ jenkins:
       allowsSignup: false
       enableCaptcha: false
       users:
+        - id: "admin"
+          password: "admin"
         - id: "shurik"
           password: "#jbcrypt:$2a$10$E1hhdKyQjeVVS9zdUgjMk.I5g/Urv7bt3fWAl9js7vKPo4fCgBE6a"
         - id: "hadas"
