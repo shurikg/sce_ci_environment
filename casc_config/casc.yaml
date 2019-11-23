@@ -9,7 +9,7 @@ groovy:
       import com.cloudbees.hudson.plugins.folder.Folder;
       import jenkins.model.Jenkins;
       
-      def numOfTeams = ${NUMBER_OF_TEAMS:-22};
+      def numOfTeams = 22;
       println("Create Folder for teams [" + numOfTeams + "]");
       (1..numOfTeams).each { currentIndex ->
         def folderName = 'Team_' + currentIndex;
