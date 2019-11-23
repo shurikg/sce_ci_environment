@@ -209,7 +209,7 @@ jenkins:
           - "student2"
           - "student3"
           - "student4"
-          pattern: "^Team_1/.*|Team_1"
+          pattern: "^Team_1/.*|Team_1|^Examples/.*|Examples"
           permissions:
           - "Job/Move"
           - "Job/Build"
@@ -234,7 +234,7 @@ jenkins:
           - "student6"
           - "student7"
           - "student8"
-          pattern: "^Team_2/.*|Team_2"
+          pattern: "^Team_2/.*|Team_2|^Examples/.*|Examples"
           permissions:
           - "Job/Move"
           - "Job/Build"
@@ -259,7 +259,7 @@ jenkins:
           - "student10"
           - "student11"
           - "student12"
-          pattern: "^Team_3/.*|Team_3"
+          pattern: "^Team_3/.*|Team_3|^Examples/.*|Examples"
           permissions:
           - "Job/Move"
           - "Job/Build"
@@ -284,7 +284,7 @@ jenkins:
           - "student14"
           - "student15"
           - "student16"
-          pattern: "^Team_4/.*|Team_4"
+          pattern: "^Team_4/.*|Team_4|^Examples/.*|Examples"
           permissions:
           - "Job/Move"
           - "Job/Build"
@@ -309,7 +309,7 @@ jenkins:
           - "student18"
           - "student19"
           - "student20"
-          pattern: "^Team_5/.*|Team_5"
+          pattern: "^Team_5/.*|Team_5|^Examples/.*|Examples"
           permissions:
           - "Job/Move"
           - "Job/Build"
@@ -334,7 +334,7 @@ jenkins:
           - "student22"
           - "student23"
           - "student24"
-          pattern: "^Team_6/.*|Team_6"
+          pattern: "^Team_6/.*|Team_6|^Examples/.*|Examples"
           permissions:
           - "Job/Move"
           - "Job/Build"
@@ -359,7 +359,7 @@ jenkins:
           - "student26"
           - "student27"
           - "student28"
-          pattern: "^Team_7/.*|Team_7"
+          pattern: "^Team_7/.*|Team_7|^Examples/.*|Examples"
           permissions:
           - "Job/Move"
           - "Job/Build"
@@ -384,7 +384,7 @@ jenkins:
           - "student30"
           - "student31"
           - "student32"
-          pattern: "^Team_8/.*|Team_8"
+          pattern: "^Team_8/.*|Team_8|^Examples/.*|Examples"
           permissions:
           - "Job/Move"
           - "Job/Build"
@@ -409,7 +409,7 @@ jenkins:
           - "student34"
           - "student35"
           - "student36"
-          pattern: "^Team_9/.*|Team_9"
+          pattern: "^Team_9/.*|Team_9|^Examples/.*|Examples"
           permissions:
           - "Job/Move"
           - "Job/Build"
@@ -434,7 +434,7 @@ jenkins:
           - "student38"
           - "student39"
           - "student40"
-          pattern: "^Team_10/.*|Team_10"
+          pattern: "^Team_10/.*|Team_10|^Examples/.*|Examples"
           permissions:
           - "Job/Move"
           - "Job/Build"
@@ -459,7 +459,7 @@ jenkins:
           - "student42"
           - "student43"
           - "student44"
-          pattern: "^Team_11/.*|Team_11"
+          pattern: "^Team_11/.*|Team_11|^Examples/.*|Examples"
           permissions:
           - "Job/Move"
           - "Job/Build"
@@ -484,7 +484,7 @@ jenkins:
           - "student46"
           - "student47"
           - "student48"
-          pattern: "^Team_12/.*|Team_12"
+          pattern: "^Team_12/.*|Team_12|^Examples/.*|Examples"
           permissions:
           - "Job/Move"
           - "Job/Build"
@@ -509,7 +509,7 @@ jenkins:
           - "student50"
           - "student51"
           - "student52"
-          pattern: "^Team_13/.*|Team_13"
+          pattern: "^Team_13/.*|Team_13|^Examples/.*|Examples"
           permissions:
           - "Job/Move"
           - "Job/Build"
@@ -534,7 +534,7 @@ jenkins:
           - "student54"
           - "student55"
           - "student56"
-          pattern: "^Team_14/.*|Team_14"
+          pattern: "^Team_14/.*|Team_14|^Examples/.*|Examples"
           permissions:
           - "Job/Move"
           - "Job/Build"
@@ -559,7 +559,7 @@ jenkins:
           - "student58"
           - "student59"
           - "student60"
-          pattern: "^Team_15/.*|Team_15"
+          pattern: "^Team_15/.*|Team_15|^Examples/.*|Examples"
           permissions:
           - "Job/Move"
           - "Job/Build"
@@ -584,7 +584,7 @@ jenkins:
           - "student62"
           - "student63"
           - "student64"
-          pattern: "^Team_16/.*|Team_16"
+          pattern: "^Team_16/.*|Team_16|^Examples/.*|Examples"
           permissions:
           - "Job/Move"
           - "Job/Build"
@@ -609,7 +609,7 @@ jenkins:
           - "student66"
           - "student67"
           - "student68"
-          pattern: "^Team_17/.*|Team_17"
+          pattern: "^Team_17/.*|Team_17|^Examples/.*|Examples"
           permissions:
           - "Job/Move"
           - "Job/Build"
@@ -634,7 +634,7 @@ jenkins:
           - "student70"
           - "student71"
           - "student72"
-          pattern: "^Team_18/.*|Team_18"
+          pattern: "^Team_18/.*|Team_18|^Examples/.*|Examples"
           permissions:
           - "Job/Move"
           - "Job/Build"
@@ -659,7 +659,7 @@ jenkins:
           - "student74"
           - "student75"
           - "student76"
-          pattern: "^Team_19/.*|Team_19"
+          pattern: "^Team_19/.*|Team_19|^Examples/.*|Examples"
           permissions:
           - "Job/Move"
           - "Job/Build"
@@ -684,7 +684,7 @@ jenkins:
           - "student78"
           - "student79"
           - "student80"
-          pattern: "^Team_20/.*|Team_20"
+          pattern: "^Team_20/.*|Team_20|^Examples/.*|Examples"
           permissions:
           - "Job/Move"
           - "Job/Build"
@@ -709,7 +709,7 @@ jenkins:
           - "student82"
           - "student83"
           - "student84"
-          pattern: "^Team_21/.*|Team_21"
+          pattern: "^Team_21/.*|Team_21|^Examples/.*|Examples"
           permissions:
           - "Job/Move"
           - "Job/Build"
@@ -734,7 +734,7 @@ jenkins:
           - "student86"
           - "student87"
           - "student88"
-          pattern: "^Team_22/.*|Team_22"
+          pattern: "^Team_22/.*|Team_22|^Examples/.*|Examples"
           permissions:
           - "Job/Move"
           - "Job/Build"

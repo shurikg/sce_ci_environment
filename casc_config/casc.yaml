@@ -2,7 +2,7 @@ jenkins:
   systemMessage: |
     Welcome to SCE Jenkins server.
 
-    This Jenkins is 100% configured and managed 'as code'.
+    This Jenkins created to teach students the CI/CD approach'.
   numExecutors: 10
 groovy:
   - script: >
@@ -24,6 +24,7 @@ groovy:
 jobs:
   - script: >
       pipelineJob('Examples/Maven-Example') {
+          description('Java/Maven example job. Reference - https://github.com/jenkins-docs/simple-java-maven-app')
           definition {
               cpsScm {
                   scriptPath 'jenkins/Jenkinsfile'
@@ -39,12 +40,13 @@ jobs:
       }
   - script: >
       pipelineJob('Examples/Python-Example') {
+          description('Java/Maven example job. Reference - https://github.com/shurikg/simple-python-pyinstaller-app')
           definition {
               cpsScm {
                   scriptPath 'jenkins/Jenkinsfile'
                   scm {
                     git {
-                        remote { url 'https://github.com/jenkins-docs/simple-python-pyinstaller-app.git' }
+                        remote { url 'https://github.com/shurikg/simple-python-pyinstaller-app.git' }
                         branch '*/master'
                         extensions {}
                     }
