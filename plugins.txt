@@ -76,3 +76,4 @@ jobConfigHistory:2.24
 pipeline-config-history:1.5
 configuration-as-code:1.33
 configuration-as-code-groovy:1.1
+role-strategy:2.15
