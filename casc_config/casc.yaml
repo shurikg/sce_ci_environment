@@ -1,8 +1,6 @@
 jenkins:
   systemMessage: |
     Welcome to SCE Jenkins server.
-
-    This Jenkins created to teach students the CI/CD approach'.
   numExecutors: 10
 groovy:
   - script: >
