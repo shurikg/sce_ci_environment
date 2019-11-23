@@ -3,10 +3,16 @@ groovy:
       import com.cloudbees.hudson.plugins.folder.Folder;
       import jenkins.model.Jenkins;
       
-      def numOfTeams = 20;
+      def numOfTeams = ${NUMBER_OF_TEAMS:-22};
+      println("Create Folder for teams [" + numOfTeams + "]");
       (1..numOfTeams).each { currentIndex ->
         def folderName = 'Team_' + currentIndex;
         if (Jenkins.instance.getItem(folderName) == null) {
           Jenkins.instance.createProject(Folder.class, folderName);
         }
       }
+  - script: >
+      println("Set executors on master to 10");
+      jenkins.model.Jenkins.instance.setNumExecutors(10);
+
+
