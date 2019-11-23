@@ -5,13 +5,13 @@ jenkins:
       enableCaptcha: false
       users:
         - id: "admin"
-          password: "admin"
+          password: "#jbcrypt:$2a$10$Uo93pz86/AP68D/HYCdHm.JN1x7nbLzA8mFIWtKow6y/eO4YUUIIi"
         - id: "shurik"
-          password: "#jbcrypt:$2a$10$E1hhdKyQjeVVS9zdUgjMk.I5g/Urv7bt3fWAl9js7vKPo4fCgBE6a"
+          password: "#jbcrypt:$2a$10$Uo93pz86/AP68D/HYCdHm.JN1x7nbLzA8mFIWtKow6y/eO4YUUIIi"
         - id: "hadas"
-          password: "#jbcrypt:$2a$10$E1hhdKyQjeVVS9zdUgjMk.I5g/Urv7bt3fWAl9js7vKPo4fCgBE6a"
+          password: "#jbcrypt:$2a$10$Uo93pz86/AP68D/HYCdHm.JN1x7nbLzA8mFIWtKow6y/eO4YUUIIi"
         - id: "sali"
-          password: "#jbcrypt:$2a$10$E1hhdKyQjeVVS9zdUgjMk.I5g/Urv7bt3fWAl9js7vKPo4fCgBE6a"
+          password: "#jbcrypt:$2a$10$Uo93pz86/AP68D/HYCdHm.JN1x7nbLzA8mFIWtKow6y/eO4YUUIIi"
   authorizationStrategy:
     roleBased:
       roles:

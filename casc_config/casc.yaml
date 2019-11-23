@@ -1,3 +1,9 @@
+jenkins:
+  systemMessage: |
+    Welcome to SCE Jenkins server.
+
+    This Jenkins is 100% configured and managed 'as code'.
+  numExecutors: 10
 groovy:
   - script: >
       import com.cloudbees.hudson.plugins.folder.Folder;
@@ -11,8 +17,23 @@ groovy:
           Jenkins.instance.createProject(Folder.class, folderName);
         }
       }
+      def exampleFolderName = "Examples";
+      if (Jenkins.instance.getItem(exampleFolderName) == null) {
+          Jenkins.instance.createProject(Folder.class, exampleFolderName);
+      }
+jobs:
   - script: >
-      println("Set executors on master to 10");
-      jenkins.model.Jenkins.instance.setNumExecutors(10);
-
-
+      pipelineJob('Maven-Example') {
+          definition {
+              cpsScm {
+                  scriptPath 'jenkins/Jenkinsfile'
+                  scm {
+                    git {
+                        remote { url 'https://github.com/jenkins-docs/simple-java-maven-app.git' }
+                        branch '*/master'
+                        extensions {}
+                    }
+                  }
+              }
+          }
+      }
