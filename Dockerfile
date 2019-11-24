@@ -1,5 +1,7 @@
 FROM jenkins/jenkins:2.190.3
 
+LABEL maintainer="shurikg" 
+
 USER root
 # Install the latest Docker CE binaries and add user `jenkins` to the docker group
 RUN apt-get update && \
@@ -28,4 +30,6 @@ RUN /usr/local/bin/install-plugins.sh < /usr/share/jenkins/ref/plugins.txt
 
 COPY casc_config/ /usr/share/jenkins/ref/
 
-ENV CASC_JENKINS_CONFIG /usr/share/jenkins/ref/
+ENV CASC_JENKINS_CONFIG /usr/share/jenkins/ref/ 
+
+VOLUME [ "/var/jenkins_home" ]
