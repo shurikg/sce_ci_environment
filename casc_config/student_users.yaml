@@ -182,3 +182,8 @@ jenkins:
           password: "#jbcrypt:$2a$10$E1hhdKyQjeVVS9zdUgjMk.I5g/Urv7bt3fWAl9js7vKPo4fCgBE6a"
         - id: "student90"
           password: "#jbcrypt:$2a$10$E1hhdKyQjeVVS9zdUgjMk.I5g/Urv7bt3fWAl9js7vKPo4fCgBE6a"
+        - id: "student91"
+          password: "#jbcrypt:$2a$10$E1hhdKyQjeVVS9zdUgjMk.I5g/Urv7bt3fWAl9js7vKPo4fCgBE6a"
+        - id: "student92"
+          password: "#jbcrypt:$2a$10$E1hhdKyQjeVVS9zdUgjMk.I5g/Urv7bt3fWAl9js7vKPo4fCgBE6a"
+
