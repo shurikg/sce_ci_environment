@@ -1,4 +1,4 @@
-# SCE CI Environment (Jenkins)
+# SCE CI Environment
 
 ## Introduction
 
