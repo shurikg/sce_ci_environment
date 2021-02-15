@@ -51,7 +51,7 @@ This docker image contains:
 
 ```sh
 docker run -d --name scejenkins \
-           -v sce_jenkins_home:/var/jenkins_home \
+           -v full_path_to_sce_jenkins_home:/var/jenkins_home \
            -v /var/run/docker.sock:/var/run/docker.sock \
            -p 80:8080 -p 50000:50000 \
            shurikg/sce_jenkins:2.190.3
@@ -95,8 +95,5 @@ Dummy User 3,54321, dummy3@gmail.com, PM2020T2, PM2020_TEAM_2
 #### Jira Usage
 
 ```sh
-sce_jira_preperation.py --url http://jira:8080 \
-                        --jira_user dummy1 \
-                        --jira_password 12345 \
-                        --input_file jira_example_input.csv
+python sce_jira_preperation.py --jira_url http://jira:8080 --jira_user dummy1 --jira_password 12345 --input_file jira_example_input.csv
 ```
