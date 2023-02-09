@@ -1,6 +1,6 @@
 FROM jenkins/jenkins:2.375.2
 
-LABEL maintainer="shurikg" 
+LABEL maintainer="shurikg"
 
 USER root
 # Install the latest Docker CE binaries and add user `jenkins` to the docker group
@@ -17,7 +17,7 @@ RUN apt-get update && \
       stable" && \
    apt-get update && \
    apt-get -y install docker-ce && \
-   groupadd -f -g 114 scedocker && \ 
+   groupadd -f -g 114 scedocker && \
    usermod -aG docker jenkins && \
    usermod -aG scedocker jenkins
 
@@ -26,10 +26,10 @@ USER jenkins
 ENV JAVA_OPTS="-Djenkins.install.runSetupWizard=false"
 
 COPY plugins.txt /usr/share/jenkins/ref/plugins.txt
-RUN /usr/local/bin/install-plugins.sh < /usr/share/jenkins/ref/plugins.txt
+RUN jenkins-plugin-cli --plugin-file /usr/share/jenkins/ref/plugins.txt
 
-COPY casc_config/ /usr/share/jenkins/ref/
+# COPY casc_config/ /usr/share/jenkins/ref/
 
-ENV CASC_JENKINS_CONFIG /usr/share/jenkins/ref/ 
+ENV CASC_JENKINS_CONFIG /usr/share/jenkins/ref/
 
 VOLUME [ "/var/jenkins_home" ]
