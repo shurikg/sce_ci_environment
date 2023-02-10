@@ -30,6 +30,6 @@ RUN jenkins-plugin-cli --plugin-file /usr/share/jenkins/ref/plugins.txt --verbos
 
 # COPY casc_config/ /usr/share/jenkins/ref/
 
-ENV CASC_JENKINS_CONFIG /usr/share/jenkins/ref/
+ENV CASC_JENKINS_CONFIG /var/jenkins_home/sce_casc
 
 VOLUME [ "/var/jenkins_home" ]
