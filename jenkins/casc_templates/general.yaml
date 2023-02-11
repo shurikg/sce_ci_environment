@@ -1,0 +1,12 @@
+security:
+  globalJobDslSecurityConfiguration:
+    useScriptSecurity: false
+unclassified:
+  location:
+    adminAddress: "address not configured yet <nobody@nowhere>"
+    url: "http://localhost/"
+  themeManager:
+    disableUserThemes: false
+    theme: "material-indigo"
+  login-theme-plugin:
+    header: "</br><h1>SCE Jenkins</h1><h1>Project Management course</h1></br>"

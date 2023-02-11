@@ -1,0 +1,24 @@
+
+jobs:
+  - script: >
+      job('seed_job') {
+        scm {
+          git {
+              remote {
+                  url('https://github.com/shurikg/sce_ci_environment.git')
+              }
+              branch('2023')
+              extensions {
+                wipeOutWorkspace()
+              }
+          }
+        }
+        steps {
+            dsl {
+                external('jobs/*.groovy')
+            }
+        }
+        triggers {
+            scm('* * * * *')
+        }
+      }

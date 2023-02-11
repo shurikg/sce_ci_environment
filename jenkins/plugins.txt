@@ -73,3 +73,5 @@ configuration-as-code-groovy
 role-strategy
 job-dsl
 material-theme
+extended-read-permission
+login-theme
