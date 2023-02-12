@@ -15,7 +15,7 @@ jobs:
         }
         steps {
             dsl {
-                external('jobs/*.groovy')
+                external('jenkins/jobs/*.groovy')
             }
         }
         triggers {

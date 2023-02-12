@@ -9,4 +9,24 @@ unclassified:
     disableUserThemes: false
     theme: "material-indigo"
   login-theme-plugin:
-    header: "</br><h1>SCE Jenkins</h1><h1>Project Management course</h1></br>"
+    head: |-
+      <style>
+          .simple-page .logo {
+              background-image: url('https://www.jenkins.io/images/logos/russian/russian.png');
+              background-repeat: no-repeat;
+              background-position: 50% 0;
+              height: 350px;
+              background-size: contain;
+          }
+          .simple-page .logo img{
+             display: none;
+          }
+          .simple-page form {
+              width: unset;
+              max-width: unset;
+          }
+      </style>
+    header: |-
+      <script>
+      document.getElementsByTagName('h1')[0].textContent = 'Welcome to SCE\'s Jenkins!'
+      </script>
