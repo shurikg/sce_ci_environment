@@ -4,11 +4,11 @@ pipelineJob('Examples/Python-Example') {
         cpsScm {
             scriptPath 'jenkins/Jenkinsfile'
             scm {
-            git {
-                remote { url 'https://github.com/shurikg/simple-python-pyinstaller-app.git' }
-                branch '*/master'
-                extensions {}
-            }
+                git {
+                    remote { url 'https://github.com/shurikg/simple-python-pyinstaller-app.git' }
+                    branch '*/master'
+                    extensions {}
+                }
             }
         }
     }
