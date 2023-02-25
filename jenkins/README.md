@@ -6,21 +6,21 @@ This document describes the steps that should be done to create a Jenkins enviro
 
 ### Jenkins
 
-The CI based on jenkins tools that will run as docker based on [official jenkins image](https://github.com/jenkinsci/docker/blob/master/README.md) and all the jenkins configuration done via [configuration as code plugin](https://github.com/jenkinsci/configuration-as-code-plugin/blob/master/README.md).
+The CI based on Jenkins tools that will run as a Docker container based on the [official Jenkins image](https://github.com/jenkinsci/docker/blob/master/README.md), and all the Jenkins configuration is done via the [Configuration as Code plugin](https://github.com/jenkinsci/configuration-as-code-plugin/blob/master/README.md).
 
-This docker image contains:
+This Docker image contains:
 
-* The Jenkins version is 2.375.2 (LTS)
+* Jenkins version 2.375.2 (LTS)
 * Relevant plugins for pipeline execution
 
-The below configurations defined via CasC
+The below configurations are defined via CasC:
 
 * Admin users
 * Student users
-* Example pipelines for python and java
+* Example pipelines for Python and Java
 * Split users into groups
 * Each group has a separate folder
-* Permission for users
+* Permissions for users
 
 #### Getting Started
 
@@ -30,9 +30,9 @@ The below configurations defined via CasC
         sudo apt install docker.io
     ```
 
-    > Important: the local docker group id should be aligned with created image.
+    > Important: The local Docker group ID should be aligned with the created image.
     >
-    > Validate what is the docker guid on the server and update the Dockerfile if needed
+    > Validate what the Docker GUID is on the server and update the Dockerfile if needed.
 
 2. Local folder that will be acting as volume to jenkins container
 
