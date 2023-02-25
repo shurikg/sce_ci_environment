@@ -4,7 +4,7 @@ security:
 unclassified:
   location:
     adminAddress: "address not configured yet <nobody@nowhere>"
-    url: "http://localhost/"
+    url: "http://dummy_url/"
   themeManager:
     disableUserThemes: false
     theme: "material-indigo"
@@ -30,3 +30,13 @@ unclassified:
       <script>
       document.getElementsByTagName('h1')[0].textContent = 'Welcome to SCE\'s Jenkins!'
       </script>
+  mailer:
+    authentication:
+      password: "{AQAAABAAAAAgFogkoggFw6ROhFsqEZ2t/Lciep3tF10iU3Fs5GpTLwvMovdHjpObCGjsYkuYqqIz}"
+      username: "sce.jenkins@gmail.com"
+    charset: "UTF-8"
+    defaultSuffix: "@gmai.com"
+    smtpHost: "smtp.gmail.com"
+    smtpPort: "465"
+    useSsl: true
+    useTls: false

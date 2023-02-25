@@ -4,6 +4,7 @@ import argparse
 import csv
 import yaml
 import os
+import subprocess
 
 ROOT_PATH = os.path.realpath(os.path.dirname(__file__))
 
@@ -147,6 +148,11 @@ def create_jobs(args):
 def general_configuration(args):
     with open(f"{ROOT_PATH}/casc_templates/general.yaml", 'r') as file:
         template = file.readlines()
+
+    hostname = subprocess.getoutput("hostname -i")
+    for i, line in enumerate(template):
+        if 'url: "http://dummy_url/"' in line:
+            template[i] = f'    url: "http://{hostname}"\n'
 
     with open(f"{args.output_folder}/general.yaml", 'w') as file:
         file.writelines(template)

@@ -2,7 +2,7 @@
 
 ## Introduction
 
-This document describe the steps that should be done in order to create Jenkins environment for academical course.
+This document describes the steps that should be done to create a Jenkins environment for the academic course.
 
 ### Jenkins
 
@@ -18,8 +18,8 @@ The below configurations defined via CasC
 * Admin users
 * Student users
 * Example pipelines for python and java
-* Split users to groups
-* Each group has separated folder
+* Split users into groups
+* Each group has a separate folder
 * Permission for users
 
 #### Getting Started
@@ -30,18 +30,17 @@ The below configurations defined via CasC
         sudo apt install docker.io
     ```
 
-    > Important: the local docker group id should be align with created image.
+    > Important: the local docker group id should be aligned with created image.
     >
     > Validate what is the docker guid on the server and update the Dockerfile if needed
 
-2. Local folder that will acting as volume to jenkins container
+2. Local folder that will be acting as volume to jenkins container
 
     ```sh
-        mkdir sce_jenkins_home
-        mkdir sce_jenkins_casc
+        mkdir sce_jenkins_home sce_jenkins_casc sce_jenkins_jobs
     ```
 
-3. Create 2 csv files
+3. Create 2 CSV files
 
     * Admin users - jenkins_admin.csv
 
@@ -86,19 +85,14 @@ The below configurations defined via CasC
 6. Run jenkins
 
     ```sh
-        docker run -d --name scejenkins2023 \
+        docker run -d --name sce_jenkins_2023 \
            -v sce_jenkins_home:/var/jenkins_home \
            -v /var/run/docker.sock:/var/run/docker.sock \
            -v sce_jenkins_casc:/var/jenkins_home/sce_casc/ \
+           -v sce_jenkins_jobs:/var/jenkins_home/jobs/ \
            -p 80:8080 -p 50000:50000 \
            --restart=on-failure \
            shurikg/sce_jenkins:2.375.2
     ```
 
     > Note: In the volume parameter better provide the full path to the folder
-
-
-# OI
-
-1. Update the jenkins url in the configuration
-2. Configure the smtp
