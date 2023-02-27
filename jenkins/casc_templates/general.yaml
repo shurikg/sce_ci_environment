@@ -1,0 +1,42 @@
+security:
+  globalJobDslSecurityConfiguration:
+    useScriptSecurity: false
+unclassified:
+  location:
+    adminAddress: "address not configured yet <nobody@nowhere>"
+    url: "http://dummy_url/"
+  themeManager:
+    disableUserThemes: false
+    theme: "material-indigo"
+  login-theme-plugin:
+    head: |-
+      <style>
+          .simple-page .logo {
+              background-image: url('https://www.jenkins.io/images/logos/russian/russian.png');
+              background-repeat: no-repeat;
+              background-position: 50% 0;
+              height: 350px;
+              background-size: contain;
+          }
+          .simple-page .logo img{
+             display: none;
+          }
+          .simple-page form {
+              width: unset;
+              max-width: unset;
+          }
+      </style>
+    header: |-
+      <script>
+      document.getElementsByTagName('h1')[0].textContent = 'Welcome to SCE\'s Jenkins!'
+      </script>
+  mailer:
+    authentication:
+      password: "{AQAAABAAAAAgFogkoggFw6ROhFsqEZ2t/Lciep3tF10iU3Fs5GpTLwvMovdHjpObCGjsYkuYqqIz}"
+      username: "sce.jenkins@gmail.com"
+    charset: "UTF-8"
+    defaultSuffix: "@gmai.com"
+    smtpHost: "smtp.gmail.com"
+    smtpPort: "465"
+    useSsl: true
+    useTls: false
