@@ -2,7 +2,7 @@
 
 ## Introduction
 
-This document describe the steps that should be done in order to create CI environment for academical course.
+This document describes the steps to create a CI environment for an academic course.
 
 [Jenkins](jenkins/README.md)
 
