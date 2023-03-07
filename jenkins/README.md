@@ -34,7 +34,7 @@ The below configurations are defined via CasC:
     >
     > Validate what the Docker GUID is on the server and update the Dockerfile if needed.
 
-2. Local folder that will be acting as volume to jenkins container
+2. The local folder that will be acting as volume to the Jenkins container
 
     ```sh
         mkdir sce_jenkins_home sce_jenkins_casc sce_jenkins_jobs
@@ -78,7 +78,7 @@ The below configurations are defined via CasC:
     ```sh
         python3 sce_jenkins_preparation.py --admin_password knesset1 \
                                             --staff_csv input_example/jenkins_admin.csv \
-                                            --student_csv input_example/jenkins_admin.csv \
+                                            --student_csv input_example/jenkins_students.csv \
                                             --output_folder sce_jenkins_casc
     ```
 
@@ -86,13 +86,13 @@ The below configurations are defined via CasC:
 
     ```sh
         docker run -d --name sce_jenkins_2023 \
-           -v sce_jenkins_home:/var/jenkins_home \
+           -v <full_path>/sce_jenkins_home:/var/jenkins_home \
            -v /var/run/docker.sock:/var/run/docker.sock \
-           -v sce_jenkins_casc:/var/jenkins_home/sce_casc/ \
-           -v sce_jenkins_jobs:/var/jenkins_home/jobs/ \
+           -v <full_path>/sce_jenkins_casc:/var/jenkins_home/sce_casc/ \
+           -v <full_path>/sce_jenkins_jobs:/var/jenkins_home/jobs/ \
            -p 80:8080 -p 50000:50000 \
            --restart=on-failure \
            shurikg/sce_jenkins:2.375.2
     ```
 
-    > Note: In the volume parameter better provide the full path to the folder
+    > Note: In the volume parameter provide the full path to the relevant folder

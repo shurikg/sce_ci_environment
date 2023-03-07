@@ -7,7 +7,7 @@ jobs:
               remote {
                   url('https://github.com/shurikg/sce_ci_environment.git')
               }
-              branch('2023')
+              branch('main')
               extensions {
                 wipeOutWorkspace()
               }

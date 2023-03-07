@@ -12,7 +12,7 @@ unclassified:
     head: |-
       <style>
           .simple-page .logo {
-              background-image: url('https://www.jenkins.io/images/logos/russian/russian.png');
+              background-image: url('https://www.jenkins.io/images/logos/israel/JenkinsOfIsrael.png');
               background-repeat: no-repeat;
               background-position: 50% 0;
               height: 350px;
