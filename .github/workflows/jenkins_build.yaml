@@ -32,4 +32,4 @@ jobs:
         with:
           context: jenkins/.
           push: true
-          tags: shurikg/sce_jenkins:2.375.2
+          tags: shurikg/sce_jenkins:2.387.1
