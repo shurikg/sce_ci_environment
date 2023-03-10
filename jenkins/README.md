@@ -10,7 +10,7 @@ The CI based on Jenkins tools that will run as a Docker container based on the [
 
 This Docker image contains:
 
-* Jenkins version 2.375.2 (LTS)
+* Jenkins version 2.387.1 (LTS)
 * Relevant plugins for pipeline execution
 
 The below configurations are defined via CasC:
@@ -92,7 +92,7 @@ The below configurations are defined via CasC:
            -v <full_path>/sce_jenkins_jobs:/var/jenkins_home/jobs/ \
            -p 80:8080 -p 50000:50000 \
            --restart=on-failure \
-           shurikg/sce_jenkins:2.375.2
+           shurikg/sce_jenkins:2.387.1
     ```
 
     > Note: In the volume parameter provide the full path to the relevant folder
