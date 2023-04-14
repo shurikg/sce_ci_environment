@@ -1,6 +1,11 @@
 security:
   globalJobDslSecurityConfiguration:
     useScriptSecurity: false
+  gitHooks:
+    allowedOnAgents: true
+    allowedOnController: true
+  gitHostKeyVerificationConfiguration:
+    sshHostKeyVerificationStrategy: "noHostKeyVerificationStrategy"
 unclassified:
   location:
     adminAddress: "address not configured yet <nobody@nowhere>"
